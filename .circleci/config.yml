@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: microsoft/dotnet:2.1-sdk
+
+    steps:
+      - checkout
+      - run:
+          name: Restore packages
+          command: dotnet restore
+      - run:
+          name: Build & Pack
+          command: dotnet pack
+      - store_artifacts:
+          path: ./WebSharper.Coinhive/bin/Debug/*.nupkg
