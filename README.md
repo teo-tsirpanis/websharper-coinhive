@@ -1,1 +1,1 @@
-websharper-coinhive
+# This project is dead. Coinhive was discontinued.
